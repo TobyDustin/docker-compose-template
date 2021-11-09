@@ -1,0 +1,9 @@
+services:
+  ui:
+    build: template-ui/
+    ports:
+      - "80:80"
+  bff:
+    build: template-srv/
+    ports:
+      - "8000:8000"
