@@ -1,0 +1,17 @@
+services:
+  ui:
+    build: template-ui/
+    container_name: template-ui
+    hostname: template-ui
+    depends_on:
+      - bff
+    restart: always
+    ports:
+      - "80:80"
+  bff:
+    build: template-srv/
+    container_name: template-srv
+    hostname: template-srv
+    restart: always
+    ports:
+      - "8000:8000"
